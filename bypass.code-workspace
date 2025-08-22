@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "bypass",
+			"path": "."
+		},
+		{
+			"name": "chowdsp_wdf",
+			"path": "../../../../Documents/WDF/chowdsp_wdf-main/include/chowdsp_wdf"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cstddef": "cpp",
+			"unordered_map": "cpp",
+			"cmath": "cpp"
+		}
+	}
+}
