@@ -2,7 +2,7 @@
 TARGET = main
 
 # Sources
-CPP_SOURCES = main.cpp RCFilter.cpp TubeScreamer.cpp Oversampler2x.cpp TSClipping.cpp
+CPP_SOURCES = main.cpp RCFilter.cpp TubeScreamer.cpp Oversampler2x.cpp TSClipping.cpp IIRFilter.cpp
 
 # Library Locations
 DAISYSP_DIR ?= ../../DaisySP

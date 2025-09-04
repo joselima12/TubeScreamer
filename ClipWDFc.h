@@ -51,7 +51,7 @@ private:
     // Current source is the output of ClipWDFb
     chowdsp::wdf::ResistiveCurrentSource<float> Is;
 
-    chowdsp::wdf::Capacitor<float> C4{ 51.0e-12f };  
+    chowdsp::wdf::Capacitor<float> C4{ 51.0e-11f };  // changed from 51pF for lower freq cutoff
 
     chowdsp::wdf::WDFParallel<float> P1{ &Is, &C4 };
 

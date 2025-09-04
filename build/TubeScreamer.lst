@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 1
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 1
   49              	.LVL1:
   50              		.loc 1 5 23 view .LVU5
   51 0010 FFF7FEFF 		bl	_ZN8RCFilter7prepareEf
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 2
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 2
 
 
   52              	.LVL2:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 1
   98 0000 10B5     		push	{r4, lr}
   99              		.cfi_def_cfa_offset 8
  100              		.cfi_offset 4, -8
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 3
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 3
 
 
  101              		.cfi_offset 14, -4
@@ -178,166 +178,153 @@ ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 1
  149              		@ frame_needed = 0, uses_anonymous_args = 0
   18:TubeScreamer.cpp ****     float x1, x2;
  150              		.loc 1 18 5 view .LVU26
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 4
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 4
 
 
   19:TubeScreamer.cpp ****     oversampler.upsample(input, x1, x2);
  151              		.loc 1 19 5 view .LVU27
   17:TubeScreamer.cpp ****     float x1, x2;
  152              		.loc 1 17 1 is_stmt 0 view .LVU28
- 153 0000 70B5     		push	{r4, r5, r6, lr}
- 154              		.cfi_def_cfa_offset 16
- 155              		.cfi_offset 4, -16
- 156              		.cfi_offset 5, -12
- 157              		.cfi_offset 6, -8
- 158              		.cfi_offset 14, -4
- 159              		.loc 1 19 25 view .LVU29
- 160 0002 00F59275 		add	r5, r0, #292
+ 153 0000 30B5     		push	{r4, r5, lr}
+ 154              		.cfi_def_cfa_offset 12
+ 155              		.cfi_offset 4, -12
+ 156              		.cfi_offset 5, -8
+ 157              		.cfi_offset 14, -4
+ 158              		.loc 1 19 25 view .LVU29
+ 159 0002 00F59275 		add	r5, r0, #292
   17:TubeScreamer.cpp ****     float x1, x2;
- 161              		.loc 1 17 1 view .LVU30
- 162 0006 84B0     		sub	sp, sp, #16
- 163              		.cfi_def_cfa_offset 32
+ 160              		.loc 1 17 1 view .LVU30
+ 161 0006 85B0     		sub	sp, sp, #20
+ 162              		.cfi_def_cfa_offset 32
+  17:TubeScreamer.cpp ****     float x1, x2;
+ 163              		.loc 1 17 1 view .LVU31
+ 164 0008 0446     		mov	r4, r0
+ 165              		.loc 1 19 25 view .LVU32
+ 166 000a 03AA     		add	r2, sp, #12
+ 167 000c 02A9     		add	r1, sp, #8
+ 168 000e 2846     		mov	r0, r5
+ 169              	.LVL13:
+  17:TubeScreamer.cpp ****     float x1, x2;
+ 170              		.loc 1 17 1 view .LVU33
+ 171 0010 CDED010A 		vstr.32	s1, [sp, #4]	@ int
+ 172              		.loc 1 19 25 view .LVU34
+ 173 0014 FFF7FEFF 		bl	_ZN13Oversampler2x8upsampleEfRfS0_
+ 174              	.LVL14:
   20:TubeScreamer.cpp **** 
-  21:TubeScreamer.cpp ****     float y1 = toneFilter.processSample(clippingStage.processSample(x1, potValue));
- 164              		.loc 1 21 40 view .LVU31
- 165 0008 00F59676 		add	r6, r0, #300
-  17:TubeScreamer.cpp ****     float x1, x2;
- 166              		.loc 1 17 1 view .LVU32
- 167 000c 0446     		mov	r4, r0
-  19:TubeScreamer.cpp **** 
- 168              		.loc 1 19 25 view .LVU33
- 169 000e 03AA     		add	r2, sp, #12
- 170 0010 02A9     		add	r1, sp, #8
- 171 0012 2846     		mov	r0, r5
- 172              	.LVL13:
-  17:TubeScreamer.cpp ****     float x1, x2;
- 173              		.loc 1 17 1 view .LVU34
- 174 0014 CDED010A 		vstr.32	s1, [sp, #4]	@ int
-  19:TubeScreamer.cpp **** 
- 175              		.loc 1 19 25 view .LVU35
- 176 0018 FFF7FEFF 		bl	_ZN13Oversampler2x8upsampleEfRfS0_
- 177              	.LVL14:
- 178              		.loc 1 21 5 is_stmt 1 view .LVU36
- 179              		.loc 1 21 40 is_stmt 0 view .LVU37
- 180 001c DDED010A 		vldr.32	s1, [sp, #4]	@ int
- 181 0020 3046     		mov	r0, r6
- 182 0022 9DED020A 		vldr.32	s0, [sp, #8]
- 183 0026 FFF7FEFF 		bl	_ZN13ClippingStage13processSampleEff
- 184              	.LVL15:
- 185 002a 2046     		mov	r0, r4
- 186 002c FFF7FEFF 		bl	_ZN8RCFilter13processSampleEf
- 187              	.LVL16:
+  21:TubeScreamer.cpp ****     //float y1 = toneFilter.processSample(clippingStage.processSample(x1, potValue)); // Not used f
   22:TubeScreamer.cpp ****     float y2 = toneFilter.processSample(clippingStage.processSample(x2, potValue));
- 188              		.loc 1 22 5 is_stmt 1 view .LVU38
- 189              		.loc 1 22 40 is_stmt 0 view .LVU39
- 190 0030 DDED010A 		vldr.32	s1, [sp, #4]	@ int
- 191 0034 3046     		mov	r0, r6
- 192 0036 9DED030A 		vldr.32	s0, [sp, #12]
- 193 003a FFF7FEFF 		bl	_ZN13ClippingStage13processSampleEff
- 194              	.LVL17:
- 195 003e 2046     		mov	r0, r4
- 196 0040 FFF7FEFF 		bl	_ZN8RCFilter13processSampleEf
- 197              	.LVL18:
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 5
+ 175              		.loc 1 22 5 is_stmt 1 view .LVU35
+ 176              		.loc 1 22 40 is_stmt 0 view .LVU36
+ 177 0018 DDED010A 		vldr.32	s1, [sp, #4]	@ int
+ 178 001c 04F59670 		add	r0, r4, #300
+ 179 0020 9DED030A 		vldr.32	s0, [sp, #12]
+ 180 0024 FFF7FEFF 		bl	_ZN13ClippingStage13processSampleEff
+ 181              	.LVL15:
+ 182 0028 2046     		mov	r0, r4
+ 183 002a FFF7FEFF 		bl	_ZN8RCFilter13processSampleEf
+ 184              	.LVL16:
+  23:TubeScreamer.cpp ****     //float y1 = clippingStage.processSample(x1, potValue); // No tone control for now
+  24:TubeScreamer.cpp ****     //float y2 = clippingStage.processSample(x2, potValue);
+  25:TubeScreamer.cpp **** 
+  26:TubeScreamer.cpp ****     return oversampler.downsample(y2);
+ 185              		.loc 1 26 5 is_stmt 1 view .LVU37
+ 186              		.loc 1 26 34 is_stmt 0 view .LVU38
+ 187 002e 2846     		mov	r0, r5
+ 188 0030 FFF7FEFF 		bl	_ZN13Oversampler2x10downsampleEf
+ 189              	.LVL17:
+  27:TubeScreamer.cpp **** }
+ 190              		.loc 1 27 1 view .LVU39
+ 191 0034 05B0     		add	sp, sp, #20
+ 192              		.cfi_def_cfa_offset 12
+ 193              		@ sp needed
+ 194 0036 30BD     		pop	{r4, r5, pc}
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 5
 
 
-  23:TubeScreamer.cpp **** 
-  24:TubeScreamer.cpp ****     return oversampler.downsample(y2);
- 198              		.loc 1 24 5 is_stmt 1 view .LVU40
- 199              		.loc 1 24 34 is_stmt 0 view .LVU41
- 200 0044 2846     		mov	r0, r5
- 201 0046 FFF7FEFF 		bl	_ZN13Oversampler2x10downsampleEf
- 202              	.LVL19:
-  25:TubeScreamer.cpp **** }
- 203              		.loc 1 25 1 view .LVU42
- 204 004a 04B0     		add	sp, sp, #16
- 205              		.cfi_def_cfa_offset 16
- 206              		@ sp needed
- 207 004c 70BD     		pop	{r4, r5, r6, pc}
- 208              		.loc 1 25 1 view .LVU43
- 209              		.cfi_endproc
- 210              	.LFE2973:
- 212 004e 00BF     		.text
- 213              	.Letext0:
- 214              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 215              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 216              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 217              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 218              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
- 219              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 220              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 221              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7
- 222              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 223              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
- 224              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 225              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 226              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 227              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 228              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 229              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstddef"
- 230              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
- 231              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/char_traits.h"
- 232              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h"
- 233              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
- 234              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 235              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h"
- 236              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/initializer_list"
- 237              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stringfwd.h"
- 238              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
- 239              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
- 240              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
- 241              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
- 242              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 243              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
- 244              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
- 245              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
- 246              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 247              		.file 35 "<built-in>"
- 248              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 249              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
- 250              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 251              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 252              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 6
+ 195              		.loc 1 27 1 view .LVU40
+ 196              		.cfi_endproc
+ 197              	.LFE2973:
+ 199              		.text
+ 200              	.Letext0:
+ 201              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 202              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 203              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 204              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 205              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 206              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 207              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 208              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7
+ 209              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 210              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 211              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 212              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 213              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 214              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 215              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 216              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstddef"
+ 217              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 218              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/char_traits.h"
+ 219              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/allocator.h"
+ 220              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 221              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 222              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/alloc_traits.h"
+ 223              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/initializer_list"
+ 224              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stringfwd.h"
+ 225              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/uses_allocator.h
+ 226              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/tuple"
+ 227              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/functional"
+ 228              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator_bas
+ 229              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 230              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/new_allocator.h"
+ 231              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/ext/alloc_traits.h"
+ 232              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 233              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 234              		.file 35 "<built-in>"
+ 235              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 236              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 237              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 238              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 239              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 240              		.file 41 "./chowdsp_wdf/wdft/wdft.h"
+ 241              		.file 42 "./chowdsp_wdf/wdft/../math/omega.h"
+ 242              		.file 43 "./chowdsp_wdf/wdft/wdft_base.h"
+ 243              		.file 44 "./chowdsp_wdf/wdft/wdft_nonlinearities.h"
+ 244              		.file 45 "./chowdsp_wdf/wdft/wdft_adaptors.h"
+ 245              		.file 46 "./chowdsp_wdf/wdft/wdft_sources.h"
+ 246              		.file 47 "./chowdsp_wdf/wdft/wdft_one_ports.h"
+ 247              		.file 48 "./chowdsp_wdf/wdf/wdf_one_ports.h"
+ 248              		.file 49 "./chowdsp_wdf/wdf/wdf_adaptors.h"
+ 249              		.file 50 "./chowdsp_wdf/wdf/wdf_sources.h"
+ 250              		.file 51 "./chowdsp_wdf/wdf/wdf_nonlinearities.h"
+ 251              		.file 52 "./chowdsp_wdf/wdf/wdf_base.h"
+ 252              		.file 53 "./chowdsp_wdf/wdft/../math/sample_type.h"
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 6
 
 
- 253              		.file 41 "./chowdsp_wdf/wdft/wdft.h"
- 254              		.file 42 "./chowdsp_wdf/wdft/../math/omega.h"
- 255              		.file 43 "./chowdsp_wdf/wdft/wdft_base.h"
- 256              		.file 44 "./chowdsp_wdf/wdft/wdft_nonlinearities.h"
- 257              		.file 45 "./chowdsp_wdf/wdft/wdft_adaptors.h"
- 258              		.file 46 "./chowdsp_wdf/wdft/wdft_sources.h"
- 259              		.file 47 "./chowdsp_wdf/wdft/wdft_one_ports.h"
- 260              		.file 48 "./chowdsp_wdf/wdf/wdf_one_ports.h"
- 261              		.file 49 "./chowdsp_wdf/wdf/wdf_adaptors.h"
- 262              		.file 50 "./chowdsp_wdf/wdf/wdf_sources.h"
- 263              		.file 51 "./chowdsp_wdf/wdf/wdf_nonlinearities.h"
- 264              		.file 52 "./chowdsp_wdf/wdf/wdf_base.h"
- 265              		.file 53 "./chowdsp_wdf/wdft/../math/sample_type.h"
- 266              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 267              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
- 268              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
- 269              		.file 57 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 270              		.file 58 "RCFilter.h"
- 271              		.file 59 "Oversampler2x.h"
- 272              		.file 60 "ClipWDFa.h"
- 273              		.file 61 "ClipWDFb.h"
- 274              		.file 62 "ClipWDFc.h"
- 275              		.file 63 "TSClipping.h"
- 276              		.file 64 "TubeScreamer.h"
- 277              		.file 65 "./chowdsp_wdf/chowdsp_wdf.h"
- 278              		.file 66 "./chowdsp_wdf/wdf/wdf.h"
-ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s 			page 7
+ 253              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 254              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 255              		.file 56 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 256              		.file 57 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 257              		.file 58 "RCFilter.h"
+ 258              		.file 59 "Oversampler2x.h"
+ 259              		.file 60 "ClipWDFa.h"
+ 260              		.file 61 "ClipWDFb.h"
+ 261              		.file 62 "ClipWDFc.h"
+ 262              		.file 63 "TSClipping.h"
+ 263              		.file 64 "TubeScreamer.h"
+ 264              		.file 65 "./chowdsp_wdf/chowdsp_wdf.h"
+ 265              		.file 66 "./chowdsp_wdf/wdf/wdf.h"
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 TubeScreamer.cpp
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:19     .text._ZN12TubeScreamer7prepareEf:0000000000000000 $t
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:26     .text._ZN12TubeScreamer7prepareEf:0000000000000000 _ZN12TubeScreamer7prepareEf
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:82     .text._ZN12TubeScreamer7setToneEff:0000000000000000 $t
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:89     .text._ZN12TubeScreamer7setToneEff:0000000000000000 _ZN12TubeScreamer7setToneEff
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:136    .text._ZN12TubeScreamer13processSampleEff:0000000000000000 $t
-/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccRJqdkE.s:143    .text._ZN12TubeScreamer13processSampleEff:0000000000000000 _ZN12TubeScreamer13processSampleEff
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:19     .text._ZN12TubeScreamer7prepareEf:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:26     .text._ZN12TubeScreamer7prepareEf:0000000000000000 _ZN12TubeScreamer7prepareEf
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:82     .text._ZN12TubeScreamer7setToneEff:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:89     .text._ZN12TubeScreamer7setToneEff:0000000000000000 _ZN12TubeScreamer7setToneEff
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:136    .text._ZN12TubeScreamer13processSampleEff:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccXn7lE1.s:143    .text._ZN12TubeScreamer13processSampleEff:0000000000000000 _ZN12TubeScreamer13processSampleEff
 
 UNDEFINED SYMBOLS
 _ZN8RCFilter7prepareEf

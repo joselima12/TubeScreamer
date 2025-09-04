@@ -4,6 +4,8 @@
  * It models the second stage of the clipping circuit, the current entering the feedback loop.
 */
 
+//Basically a high-pass RC filter.
+
 #pragma once
 
 #include <chowdsp_wdf/chowdsp_wdf.h>

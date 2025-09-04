@@ -18,6 +18,7 @@
  */
 
 #include <array>
+#include <cmath>
 #include <cstdint>
 #include "daisy_seed.h"
 #include "hid/ctrl.h"    // AnalogControl

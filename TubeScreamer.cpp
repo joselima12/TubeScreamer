@@ -18,8 +18,10 @@ float TubeScreamer::processSample(float input, float potValue)
     float x1, x2;
     oversampler.upsample(input, x1, x2);
 
-    float y1 = toneFilter.processSample(clippingStage.processSample(x1, potValue));
+    //float y1 = toneFilter.processSample(clippingStage.processSample(x1, potValue)); // Not used for upsampling
     float y2 = toneFilter.processSample(clippingStage.processSample(x2, potValue));
+    //float y1 = clippingStage.processSample(x1, potValue); // No tone control for now
+    //float y2 = clippingStage.processSample(x2, potValue);
 
     return oversampler.downsample(y2);
 }
