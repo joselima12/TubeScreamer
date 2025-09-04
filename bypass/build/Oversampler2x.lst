@@ -1,0 +1,166 @@
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"Oversampler2x.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN13Oversampler2x7prepareEv,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_ZN13Oversampler2x7prepareEv
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN13Oversampler2x7prepareEv:
+  27              	.LVL0:
+  28              	.LFB544:
+  29              		.file 1 "Oversampler2x.cpp"
+   1:Oversampler2x.cpp **** #include "Oversampler2x.h"
+   2:Oversampler2x.cpp **** 
+   3:Oversampler2x.cpp **** void Oversampler2x::prepare()
+   4:Oversampler2x.cpp **** {
+  30              		.loc 1 4 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   5:Oversampler2x.cpp ****     y1 = y2 = 0.0f;
+  35              		.loc 1 5 5 view .LVU1
+  36              		.loc 1 5 13 is_stmt 0 view .LVU2
+  37 0000 0023     		movs	r3, #0
+  38 0002 4360     		str	r3, [r0, #4]	@ float
+  39              		.loc 1 5 8 view .LVU3
+  40 0004 0360     		str	r3, [r0]	@ float
+   6:Oversampler2x.cpp **** }
+  41              		.loc 1 6 1 view .LVU4
+  42 0006 7047     		bx	lr
+  43              		.cfi_endproc
+  44              	.LFE544:
+  46              		.section	.text._ZN13Oversampler2x8upsampleEfRfS0_,"ax",%progbits
+  47              		.align	1
+  48              		.p2align 2,,3
+  49              		.global	_ZN13Oversampler2x8upsampleEfRfS0_
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  54              	_ZN13Oversampler2x8upsampleEfRfS0_:
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s 			page 2
+
+
+  55              	.LVL1:
+  56              	.LFB545:
+   7:Oversampler2x.cpp **** 
+   8:Oversampler2x.cpp **** void Oversampler2x::upsample(float x, float& x1, float& x2)
+   9:Oversampler2x.cpp **** {
+  57              		.loc 1 9 1 is_stmt 1 view -0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  10:Oversampler2x.cpp ****     x1 = x2 = x; // zero-order hold
+  62              		.loc 1 10 5 view .LVU6
+  63              		.loc 1 10 13 is_stmt 0 view .LVU7
+  64 0000 82ED000A 		vstr.32	s0, [r2]
+  65              		.loc 1 10 8 view .LVU8
+  66 0004 81ED000A 		vstr.32	s0, [r1]
+  11:Oversampler2x.cpp **** }
+  67              		.loc 1 11 1 view .LVU9
+  68 0008 7047     		bx	lr
+  69              		.cfi_endproc
+  70              	.LFE545:
+  72 000a 00BF     		.section	.text._ZN13Oversampler2x10downsampleEf,"ax",%progbits
+  73              		.align	1
+  74              		.p2align 2,,3
+  75              		.global	_ZN13Oversampler2x10downsampleEf
+  76              		.syntax unified
+  77              		.thumb
+  78              		.thumb_func
+  80              	_ZN13Oversampler2x10downsampleEf:
+  81              	.LVL2:
+  82              	.LFB546:
+  12:Oversampler2x.cpp **** 
+  13:Oversampler2x.cpp **** float Oversampler2x::downsample(float y0)
+  14:Oversampler2x.cpp **** {
+  83              		.loc 1 14 1 is_stmt 1 view -0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87              		@ link register save eliminated.
+  15:Oversampler2x.cpp ****     float result = 0.25f * y2 + 0.5f * y1 + 0.25f * y0;
+  88              		.loc 1 15 5 view .LVU11
+  89              		.loc 1 15 38 is_stmt 0 view .LVU12
+  90 0000 F6EE007A 		vmov.f32	s15, #5.0e-1
+  91              		.loc 1 15 40 view .LVU13
+  92 0004 D0ED006A 		vldr.32	s13, [r0]
+  93              		.loc 1 15 31 view .LVU14
+  94 0008 B5EE007A 		vmov.f32	s14, #2.5e-1
+  95 000c 90ED016A 		vldr.32	s12, [r0, #4]
+  16:Oversampler2x.cpp ****     y2 = y1;
+  17:Oversampler2x.cpp ****     y1 = y0;
+  96              		.loc 1 17 8 view .LVU15
+  97 0010 80ED000A 		vstr.32	s0, [r0]
+  15:Oversampler2x.cpp ****     float result = 0.25f * y2 + 0.5f * y1 + 0.25f * y0;
+  98              		.loc 1 15 38 view .LVU16
+  99 0014 66EEA77A 		vmul.f32	s15, s13, s15
+  16:Oversampler2x.cpp ****     y2 = y1;
+ 100              		.loc 1 16 8 view .LVU17
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s 			page 3
+
+
+ 101 0018 C0ED016A 		vstr.32	s13, [r0, #4]
+  15:Oversampler2x.cpp ****     float result = 0.25f * y2 + 0.5f * y1 + 0.25f * y0;
+ 102              		.loc 1 15 31 view .LVU18
+ 103 001c E6EE077A 		vfma.f32	s15, s12, s14
+ 104              	.LVL3:
+  16:Oversampler2x.cpp ****     y2 = y1;
+ 105              		.loc 1 16 5 is_stmt 1 view .LVU19
+ 106              		.loc 1 17 5 view .LVU20
+  18:Oversampler2x.cpp ****     return result;
+ 107              		.loc 1 18 5 view .LVU21
+  19:Oversampler2x.cpp **** }
+ 108              		.loc 1 19 1 is_stmt 0 view .LVU22
+ 109 0020 E0EE077A 		vfma.f32	s15, s0, s14
+ 110              	.LVL4:
+ 111              		.loc 1 19 1 view .LVU23
+ 112 0024 B0EE670A 		vmov.f32	s0, s15
+ 113              	.LVL5:
+ 114              		.loc 1 19 1 view .LVU24
+ 115 0028 7047     		bx	lr
+ 116              		.cfi_endproc
+ 117              	.LFE546:
+ 119 002a 00BF     		.text
+ 120              	.Letext0:
+ 121              		.file 2 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 122              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 123              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7
+ 124              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 125              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 126              		.file 7 "Oversampler2x.h"
+ 127              		.file 8 "<built-in>"
+ARM GAS  /var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Oversampler2x.cpp
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:19     .text._ZN13Oversampler2x7prepareEv:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:26     .text._ZN13Oversampler2x7prepareEv:0000000000000000 _ZN13Oversampler2x7prepareEv
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:47     .text._ZN13Oversampler2x8upsampleEfRfS0_:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:54     .text._ZN13Oversampler2x8upsampleEfRfS0_:0000000000000000 _ZN13Oversampler2x8upsampleEfRfS0_
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:73     .text._ZN13Oversampler2x10downsampleEf:0000000000000000 $t
+/var/folders/yd/h_51qzcj4039f6rvxdz3lvym0000gn/T//ccOQhlg4.s:80     .text._ZN13Oversampler2x10downsampleEf:0000000000000000 _ZN13Oversampler2x10downsampleEf
+
+NO UNDEFINED SYMBOLS
